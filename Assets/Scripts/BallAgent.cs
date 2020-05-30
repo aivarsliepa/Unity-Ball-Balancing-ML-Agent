@@ -37,7 +37,7 @@ public class BallAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(platform.transform.rotation.eulerAngles);
-        sensor.AddObservation(platform.transform.localPosition - transform.localPosition);
+        sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(rBody.velocity);
     }
 
@@ -58,7 +58,7 @@ public class BallAgent : Agent
             EndEpisode();
         } else
         {
-            AddReward(0.01f);
+            AddReward(0.1f);
         }
     }
 

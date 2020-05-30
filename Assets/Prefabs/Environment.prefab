@@ -224,7 +224,7 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 5022602860645237092, guid: 047bfcafe64ead94ab5719e069a96bc8, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 6e8665187c8ac1447905ca9998c41667, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: BallBalancer
