@@ -58,7 +58,7 @@ public class BallAgent : Agent
             EndEpisode();
         } else
         {
-            AddReward(0.1f);
+            AddReward(0.01f);
         }
     }
 
