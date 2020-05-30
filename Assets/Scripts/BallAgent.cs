@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
-using Unity.Burst;
 using System;
 using Random = UnityEngine.Random;
 
@@ -55,7 +54,11 @@ public class BallAgent : Agent
             Math.Abs(transform.localPosition.x - platform.transform.localPosition.x) > bounds ||
             Math.Abs(transform.localPosition.z - platform.transform.localPosition.z) > bounds)
         {
+            AddReward(-1f);
             EndEpisode();
+        } else
+        {
+            AddReward(0.1f);
         }
     }
 
@@ -136,9 +139,4 @@ public class BallAgent : Agent
         rotationY = nextY;
         rotationZ = nextZ;
     }
-
-    //public override void CollectDiscreteActionMasks(DiscreteActionMasker actionMasker)
-    //{
-    //    base.CollectDiscreteActionMasks(actionMasker);
-    //}
 }
